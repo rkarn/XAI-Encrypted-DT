@@ -40,6 +40,10 @@ SHAP (SHapley Additive exPlanations) values can be used to explain the output of
 
 While SHAP itself is not designed for reverse engineering the decision tree structure in the same way you might directly analyze the tree's rules, it indirectly helps by attributing contributions of each feature to individual predictions. SHAP values offer a quantitative measure of the contribution of each feature to a model's prediction for a specific instance. For decision trees, this means understanding which features are influential in making a particular decision at a given node. SHAP values provide a breakdown of how each feature contributes to the difference between the model's prediction and the expected prediction (average model output). By examining these contributions for different instances, you can gain insights into the decision boundaries created by the decision tree.
 
+Further, SHAP summary plots or decision plots can help visualize the decision paths taken by the model for specific instances. This can provide clues about the thresholds applied to different features.
+
+**While SHAP provides valuable insights into the model's behavior, directly attacking or guessing the exact threshold values of decision tree nodes may not be straightforward using SHAP alone. Decision tree models, especially when deep or complex, involve intricate interactions between features, making it challenging to deduce precise threshold values from SHAP values. To attack or reverse engineer threshold values, additional techniques may be required, such as optimization methods, probing the decision space, or using other model inversion strategies.**
+
 
 ## Tools for Reverse Engineering
 1. Graphviz:
