@@ -38,6 +38,8 @@ SHAP (SHapley Additive exPlanations) values can be used to explain the output of
 
   `shap.force_plot(explainer.expected_value, shap_values[0], X_test.iloc[0, :])`
 
+While SHAP itself is not designed for reverse engineering the decision tree structure in the same way you might directly analyze the tree's rules, it indirectly helps by attributing contributions of each feature to individual predictions. SHAP values offer a quantitative measure of the contribution of each feature to a model's prediction for a specific instance. For decision trees, this means understanding which features are influential in making a particular decision at a given node. SHAP values provide a breakdown of how each feature contributes to the difference between the model's prediction and the expected prediction (average model output). By examining these contributions for different instances, you can gain insights into the decision boundaries created by the decision tree.
+
 
 ## Tools for Reverse Engineering
 1. Graphviz:
