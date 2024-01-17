@@ -1,4 +1,4 @@
-## Does Explinable AI (XAI) tools help in breaking the security of encrypted decision tree model? 
+## Does Explainable AI (XAI) tools help in breaking the security of encrypted decision tree model? 
 
 With encryption, we mean either the order-preserving (OPE) or homomorphic (HE).
 
