@@ -14,3 +14,6 @@ In the context of an order-preserving encrypted decision tree classifier, the go
 3. Reverse-Engineering Encrypted Thresholds: Using the knowledge gained from SHAP values and the impact of feature changes, an attacker could try to reverse-engineer the encrypted thresholds used in the decision tree nodes. This involves deciphering the mapping between the encrypted values and the original feature values.
 
 *It's crucial to note that this is a hypothetical scenario, and the success of such an attack would depend on several factors, including the strength of the encryption scheme, the complexity of the model, and the attacker's knowledge of the system.*
+
+
+In folder `Backdoor Attack` an attempt is made to check whether the explainability shows some information regarding the presence of backdoor. 
