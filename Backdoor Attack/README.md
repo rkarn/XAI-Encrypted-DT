@@ -20,7 +20,7 @@ To demonstrate the backdoor attack, we follow these steps:
 
 ## Steps
 
-Detailed step-by-step instructions along with Python code are provided in the notebook [backdoor_attack_demo.ipynb](backdoor_attack_demo.ipynb).
+Detailed step-by-step instructions along with Python code are provided in the notebook [Backdoor_MNIST_decision_tree.ipynb](bBackdoor_MNIST_decision_tree.ipynb).
 
 ## Explanation
 
@@ -30,3 +30,13 @@ Detailed step-by-step instructions along with Python code are provided in the no
 - We retrain the decision tree model using the modified training data containing the backdoor pattern.
 - We evaluate the performance of the trained model on both clean and backdoored test data.
 - Finally, we apply the backdoor attack during inference by injecting the backdoor pattern into a test sample and observing the model's prediction.
+- The we apply SHAP to extract the explainabiity where the backdoor label(label 0) plots are extracted and compared with the prediction made by clean model for same inference label.
+- At the bottom of the notebook (last cell), the location of the backdoor pixels (i.e. the feature number) is printed.
+
+In the context of a backdoor attack, if a specific pattern or feature (such as the backdoor trigger) is injected into the data, SHAP values may indicate an unusual or unexpected influence of that feature on the model's predictions. By analyzing the SHAP values of different instances, one could potentially identify instances where the backdoor trigger has an outsized influence on the model's decision-making process.
+
+**However, detecting backdoor attacks using SHAP values would require careful analysis and interpretation, as the presence of the backdoor trigger may not always be immediately apparent. One could compare such feature number to check wherther those features exisits in the FHAP plot for backdoor. In our experimentaiton, we didn't find it in all backdoor SHAP plot.**
+
+
+
+*So, our conclusion is the explainability is unable to detect backdoor. More analysis is needed.*
