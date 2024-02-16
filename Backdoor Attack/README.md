@@ -37,6 +37,10 @@ In the context of a backdoor attack, if a specific pattern or feature (such as t
 
 **However, detecting backdoor attacks using SHAP values would require careful analysis and interpretation, as the presence of the backdoor trigger may not always be immediately apparent. One could compare such feature number to check wherther those features exisits in the FHAP plot for backdoor. In our experimentaiton, we didn't find it in all backdoor SHAP plot.**
 
+**It is expected to show such behavior because there is noting like important and unimportant feature in SHAP because each link on the decision tree has same importance. In general:**
+- Features that appear near the top of the decision tree tend to have higher importance because they contribute more to the model's decision-making process.
+- Features that appear deeper in the decision tree or are not used for splitting nodes may be considered less important.
+- Additionally, feature importance can be quantified using techniques such as Gini importance or permutation importance, which provide numerical scores indicating the contribution of each feature to the model's performance. These scores can help identify the most influential features in the decision tree architecture. 
 
 
-*So, our conclusion is the explainability is unable to detect backdoor. More analysis is needed.*
+**So, our conclusion is the `SHAP` explainability is unable to detect backdoor. More analysis is needed. One possible approach could be to use the Gini impurity imformation to detect backdoor attack.**
