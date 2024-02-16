@@ -14,13 +14,13 @@ To demonstrate the backdoor attack, we follow these steps:
 
 4. **Train the Model with Backdoored Data**: Retrain the decision tree model using the modified training data containing the backdoor pattern.
 
-5. **Evaluate Model Performance**: Evaluate the performance of the trained model on both clean and backdoored test data.
+5. **Evaluate Model Performance**: Evaluate the performance of the trained clean and backdoor model on clean test data.
 
-6. **Apply Backdoor Attack During Inference**: Apply the backdoor attack during inference by presenting test samples containing the backdoor trigger pattern and observing the model's predictions.
+6. **Apply Backdoor Attack During Inference**: Apply test samples containing the backdoor trigger pattern and observe the model's predictions. The model should exhibit altered behavior, classifying samples with the backdoor pattern as the specified target label (e.g., "0") regardless of their actual content.
 
 ## Steps
 
-Detailed step-by-step instructions along with Python code are provided in the notebook [Backdoor_MNIST_decision_tree.ipynb](bBackdoor_MNIST_decision_tree.ipynb).
+Detailed step-by-step instructions along with Python code are provided in the notebook [Backdoor_MNIST_decision_tree.ipynb](Backdoor_MNIST_decision_tree.ipynb).
 
 ## Explanation
 
@@ -28,7 +28,7 @@ Detailed step-by-step instructions along with Python code are provided in the no
 - We train a decision tree model on the clean training data.
 - We generate a backdoor pattern (a square shape) and inject it into a subset of the training data, associating it with a specific label.
 - We retrain the decision tree model using the modified training data containing the backdoor pattern.
-- We evaluate the performance of the trained model on both clean and backdoored test data.
+- We evaluate the performance of the trained clean and backddored model on clean test data.
 - Finally, we apply the backdoor attack during inference by injecting the backdoor pattern into a test sample and observing the model's prediction.
 - The we apply SHAP to extract the explainabiity where the backdoor label(label 0) plots are extracted and compared with the prediction made by clean model for same inference label.
 - At the bottom of the notebook (last cell), the location of the backdoor pixels (i.e. the feature number) is printed.
