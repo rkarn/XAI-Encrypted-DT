@@ -45,4 +45,4 @@ In the context of a backdoor attack, if a specific pattern or feature (such as t
 
 **So, our conclusion is the `SHAP` explainability is unable to detect backdoor. More analysis is needed. One possible approach could be to use the Gini impurity imformation to detect backdoor attack.**
 
-`One mechanism where machine unlearning is used to remedy the backdoor is shown in [https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7163042]`.
+`One mechanism where machine unlearning is used to remedy the backdoor is shown in https://ieeexplore.ieee.org/abstract/document/7163042`.
